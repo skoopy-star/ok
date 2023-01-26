@@ -1,0 +1,64 @@
+let urlQueue=[],
+backButton=document.createElement("button");
+backButton.style.width="25px";
+backButton.innerHTML="<";
+backButton.style.fontSize = "16px";
+let urlBox=document.createElement("input");
+urlBox.type="text",urlBox.style.width="480px";
+let goButton=document.createElement("button");
+goButton.style.fontSize = "16px";
+goButton.innerHTML="Load URL";
+let goButton1=document.createElement("button");
+goButton1.style.backgroundColor="deepskyblue";
+goButton1.style.fontSize = "16px";
+goButton1.innerHTML="Load Bing 🔔";
+let goButton2=document.createElement("button");
+goButton2.style.backgroundColor="lightslategray";
+goButton2.style.fontSize = "16px";
+goButton2.innerHTML="Load Proxy 🤫";
+let dcButton=document.createElement("button");
+dcButton.style.backgroundColor="slateblue";
+dcButton.style.fontSize = "16px";
+dcButton.innerHTML="Load Discord 😽" ;
+let mineButton=document.createElement("button");
+mineButton.style.backgroundColor="limegreen";
+mineButton.style.fontSize = "16px";
+mineButton.innerHTML="Load Minecraft ⛏%EF%B8%8F";
+let flixButton=document.createElement("button");
+flixButton.style.backgroundColor=("firebrick");
+flixButton.style.fontSize = "16px";
+flixButton.innerHTML="Netflix 🎥";
+let mangaButton=document.createElement("button");
+mangaButton.style.backgroundColor=("ce92e6");
+mangaButton.style.fontSize = "16px";
+mangaButton.innerHTML="Manga 📖";
+let iframe=document.createElement("iframe");
+iframe.src="https://www.bing.com",
+iframe.style.border = 'none',
+iframe.style.width = '100%',
+iframe.style.height = '100%',
+iframe.style.margin = '0',
+goButton.addEventListener("click",(()=>{0!==urlBox.value.length&&urlBox.value.startsWith("http")&&(iframe.src=urlBox.value.toLowerCase(),
+urlQueue.push(urlBox.value.toLowerCase()))})),
+goButton1.addEventListener("click",(()=>{iframe.src="https://www.bing.com",urlQueue.push("https://www.bing.com")})),
+goButton2.addEventListener("click",(()=>{iframe.src="https://home.0xdc.icu/",urlQueue.push("https://home.0xdc.icu/")})),
+dcButton.addEventListener("click",(()=>{iframe.src="https://discord.com/channels/746823609565184123/762025936752869376",
+urlQueue.push("https://discord.com/channels/746823609565184123/762025936752869376")})),
+backButton.addEventListener("click",(()=>{urlQueue.length>1&&(urlQueue.pop(),
+iframe.src=urlQueue.at(-1))})),
+mineButton.addEventListener("click",(()=>{iframe.src="https://home.0xdc.icu/craft.html",
+urlQueue.push("https://home.0xdc.icu/craft.html")})),
+flixButton.addEventListener("click",(()=>{iframe.src="https://xs.1514.info/service/hvtrs8%2F-wuw%2Cngtdlkx%2Ccmm-",
+urlQueue.push("https://xs.1514.info/service/hvtrs8%2F-wuw%2Cngtdlkx%2Ccmm-")})),
+mangaButton.addEventListener("click",(()=>{iframe.src="https://xs.1514.info/service/hvtrs8%2F-mcnealavo%2Ccmm-",
+urlQueue.push("https://xs.1514.info/service/hvtrs8%2F-mcnealavo%2Ccmm-")})),
+document.body.appendChild(backButton),
+document.body.appendChild(urlBox),
+document.body.appendChild(goButton),
+document.body.appendChild(goButton1),
+document.body.appendChild(goButton2),
+document.body.appendChild(dcButton),
+document.body.appendChild(mineButton),
+document.body.appendChild(flixButton),
+document.body.appendChild(mangaButton),
+document.body.appendChild(iframe);
